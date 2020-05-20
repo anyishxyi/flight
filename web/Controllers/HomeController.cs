@@ -18,16 +18,19 @@ namespace web.Controllers
             _logger = logger;
         }
 
+		// GET /HOME
         public IActionResult Index()
         {
             return View();
         }
 
+		// GET /HOME/PRIVACY
         public IActionResult Privacy()
         {
             return View();
         }
 
+		// GET /HOME/ERROR
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
