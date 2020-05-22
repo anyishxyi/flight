@@ -6,6 +6,7 @@
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/NetApi.runtimeconfig.dev.json
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/NetApi.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/NetApi.pdb
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Ado.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
@@ -28,11 +29,19 @@
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Orleans.Clustering.AdoNet.dll
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Orleans.Core.dll
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Orleans.Core.Abstractions.dll
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/OrleansProviders.dll
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Orleans.Persistence.AdoNet.dll
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Orleans.Reminders.AdoNet.dll
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Orleans.Runtime.Abstractions.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -117,7 +126,6 @@
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
-/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.csprojAssemblyReference.cache
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.csproj.CoreCompileInputs.cache
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.AssemblyInfoInputs.cache
@@ -129,3 +137,4 @@
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.dll
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.pdb
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.genruntimeconfig.cache
+/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.csprojAssemblyReference.cache

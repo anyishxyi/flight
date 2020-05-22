@@ -9,7 +9,7 @@ using NetApi.Models;
 
 namespace NetApi.Controllers
 {
-    [Route("api/user")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -20,17 +20,15 @@ namespace NetApi.Controllers
             _context = context;
         }
 
-        // GET: api/user
+        // GET: api/User
         [HttpGet]
-        [Route("all_users")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
         }
 
-        // GET: api/user/5
+        // GET: api/User/5
         [HttpGet("{id}")]
-        [Route("get_user")]
         public async Task<ActionResult<User>> GetUser(long id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -43,11 +41,10 @@ namespace NetApi.Controllers
             return user;
         }
 
-        // PUT: api/user/5
+        // PUT: api/User/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        [Route("update_user")]
         public async Task<IActionResult> PutUser(long id, User user)
         {
             if (id != user.id)
@@ -76,11 +73,10 @@ namespace NetApi.Controllers
             return NoContent();
         }
 
-        // POST: api/user
+        // POST: api/User
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        [Route("add_user")]
         public async Task<ActionResult<User>> PostUser(User user)
         {
             _context.Users.Add(user);
@@ -89,9 +85,8 @@ namespace NetApi.Controllers
             return CreatedAtAction("GetUser", new { id = user.id }, user);
         }
 
-        // DELETE: api/user/5
+        // DELETE: api/User/5
         [HttpDelete("{id}")]
-        [Route("delete_user")]
         public async Task<ActionResult<User>> DeleteUser(long id)
         {
             var user = await _context.Users.FindAsync(id);

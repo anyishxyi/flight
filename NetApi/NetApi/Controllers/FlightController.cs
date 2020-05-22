@@ -9,7 +9,7 @@ using NetApi.Models;
 
 namespace NetApi.Controllers
 {
-    [Route("api/flight")]
+    [Route("api/[controller]")]
     [ApiController]
     public class FlightController : ControllerBase
     {
@@ -22,7 +22,6 @@ namespace NetApi.Controllers
 
         // GET: api/Flight
         [HttpGet]
-        [Route("all_flight")]
         public async Task<ActionResult<IEnumerable<Flight>>> GetFlights()
         {
             return await _context.Flights.ToListAsync();
@@ -30,7 +29,6 @@ namespace NetApi.Controllers
 
         // GET: api/Flight/5
         [HttpGet("{id}")]
-        [Route("get_flight")]
         public async Task<ActionResult<Flight>> GetFlight(long id)
         {
             var flight = await _context.Flights.FindAsync(id);
@@ -47,7 +45,6 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        [Route("update_flight")]
         public async Task<IActionResult> PutFlight(long id, Flight flight)
         {
             if (id != flight.id)
@@ -80,7 +77,6 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        [Route("add_flight")]
         public async Task<ActionResult<Flight>> PostFlight(Flight flight)
         {
             _context.Flights.Add(flight);
@@ -91,7 +87,6 @@ namespace NetApi.Controllers
 
         // DELETE: api/Flight/5
         [HttpDelete("{id}")]
-        [Route("delete_flight")]
         public async Task<ActionResult<Flight>> DeleteFlight(long id)
         {
             var flight = await _context.Flights.FindAsync(id);

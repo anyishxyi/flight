@@ -9,7 +9,7 @@ using NetApi.Models;
 
 namespace NetApi.Controllers
 {
-    [Route("api/seat")]
+    [Route("api/[controller]")]
     [ApiController]
     public class SeatController : ControllerBase
     {
@@ -22,7 +22,6 @@ namespace NetApi.Controllers
 
         // GET: api/Seat
         [HttpGet]
-        [Route("all_seat")]
         public async Task<ActionResult<IEnumerable<Seat>>> GetSeats()
         {
             return await _context.Seats.ToListAsync();
@@ -30,7 +29,6 @@ namespace NetApi.Controllers
 
         // GET: api/Seat/5
         [HttpGet("{id}")]
-        [Route("get_seat")]
         public async Task<ActionResult<Seat>> GetSeat(long id)
         {
             var seat = await _context.Seats.FindAsync(id);
@@ -47,7 +45,6 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        [Route("update_seat")]
         public async Task<IActionResult> PutSeat(long id, Seat seat)
         {
             if (id != seat.id)
@@ -80,7 +77,6 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        [Route("add_seat")]
         public async Task<ActionResult<Seat>> PostSeat(Seat seat)
         {
             _context.Seats.Add(seat);
@@ -91,7 +87,6 @@ namespace NetApi.Controllers
 
         // DELETE: api/Seat/5
         [HttpDelete("{id}")]
-        [Route("delet_seat")]
         public async Task<ActionResult<Seat>> DeleteSeat(long id)
         {
             var seat = await _context.Seats.FindAsync(id);

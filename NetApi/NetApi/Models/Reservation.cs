@@ -7,7 +7,7 @@ namespace NetApi.Models
         {
         }
         public long id { get; set; }
-        public Flight flight { get; set; }
-        public User user { get; set; }
+        public virtual Flight flight { get; set; }
+        public virtual User user { get; set; }
     }
 }

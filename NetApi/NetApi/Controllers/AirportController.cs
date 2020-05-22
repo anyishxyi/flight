@@ -9,7 +9,7 @@ using NetApi.Models;
 
 namespace NetApi.Controllers
 {
-    [Route("api/airport")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AirportController : ControllerBase
     {
@@ -22,7 +22,6 @@ namespace NetApi.Controllers
 
         // GET: api/Airport
         [HttpGet]
-        [Route("all_airport")]
         public async Task<ActionResult<IEnumerable<Airport>>> GetAirports()
         {
             return await _context.Airports.ToListAsync();
@@ -30,7 +29,6 @@ namespace NetApi.Controllers
 
         // GET: api/Airport/5
         [HttpGet("{id}")]
-        [Route("get_airport")]
         public async Task<ActionResult<Airport>> GetAirport(long id)
         {
             var airport = await _context.Airports.FindAsync(id);
@@ -47,7 +45,6 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        [Route("update_airport")]
         public async Task<IActionResult> PutAirport(long id, Airport airport)
         {
             if (id != airport.id)
@@ -80,7 +77,6 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        [Route("add_airport")]
         public async Task<ActionResult<Airport>> PostAirport(Airport airport)
         {
             _context.Airports.Add(airport);
@@ -91,7 +87,6 @@ namespace NetApi.Controllers
 
         // DELETE: api/Airport/5
         [HttpDelete("{id}")]
-        [Route("delete_airport")]
         public async Task<ActionResult<Airport>> DeleteAirport(long id)
         {
             var airport = await _context.Airports.FindAsync(id);
