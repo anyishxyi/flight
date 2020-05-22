@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/NetApi.csproj": {}
+    "C:\\Users\\benoni.d\\source\\repos\\Backend Koumare\\group-777801\\NetApi\\NetApi\\NetApi.csproj": {}
   },
   "projects": {
-    "/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/NetApi.csproj": {
+    "C:\\Users\\benoni.d\\source\\repos\\Backend Koumare\\group-777801\\NetApi\\NetApi\\NetApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/NetApi.csproj",
+        "projectUniqueName": "C:\\Users\\benoni.d\\source\\repos\\Backend Koumare\\group-777801\\NetApi\\NetApi\\NetApi.csproj",
         "projectName": "NetApi",
-        "projectPath": "/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/NetApi.csproj",
-        "packagesPath": "/Users/akoumare/.nuget/packages/",
-        "outputPath": "/Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/",
+        "projectPath": "C:\\Users\\benoni.d\\source\\repos\\Backend Koumare\\group-777801\\NetApi\\NetApi\\NetApi.csproj",
+        "packagesPath": "C:\\Users\\benoni.d\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benoni.d\\source\\repos\\Backend Koumare\\group-777801\\NetApi\\NetApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/akoumare/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\benoni.d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -97,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

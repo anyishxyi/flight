@@ -24,14 +24,14 @@ namespace NetApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Airport>>> GetAirports()
         {
-            return await _context.Airports.ToListAsync();
+            return await _context.Airport.ToListAsync();
         }
 
         // GET: api/Airport/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Airport>> GetAirport(long id)
         {
-            var airport = await _context.Airports.FindAsync(id);
+            var airport = await _context.Airport.FindAsync(id);
 
             if (airport == null)
             {
@@ -79,7 +79,7 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Airport>> PostAirport(Airport airport)
         {
-            _context.Airports.Add(airport);
+            _context.Airport.Add(airport);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetAirport", new { id = airport.id }, airport);
@@ -89,13 +89,13 @@ namespace NetApi.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Airport>> DeleteAirport(long id)
         {
-            var airport = await _context.Airports.FindAsync(id);
+            var airport = await _context.Airport.FindAsync(id);
             if (airport == null)
             {
                 return NotFound();
             }
 
-            _context.Airports.Remove(airport);
+            _context.Airport.Remove(airport);
             await _context.SaveChangesAsync();
 
             return airport;
@@ -103,7 +103,7 @@ namespace NetApi.Controllers
 
         private bool AirportExists(long id)
         {
-            return _context.Airports.Any(e => e.id == id);
+            return _context.Airport.Any(e => e.id == id);
         }
     }
 }

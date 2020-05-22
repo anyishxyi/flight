@@ -10,10 +10,10 @@ namespace NetApi.Models
         {
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Flight> Flights { get; set; }
-        public DbSet<Reservation> Reservations { get; set; }
-        public DbSet<Seat> Seats { get; set; }
-        public DbSet<Airport> Airports { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Flight> Flight { get; set; }
+        public DbSet<Reservation> Reservation { get; set; }
+        public DbSet<Seat> Seat { get; set; }
+        public DbSet<Airport> Airport { get; set; }
     }
 }

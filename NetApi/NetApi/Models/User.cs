@@ -8,7 +8,7 @@ namespace NetApi.Models
         public User(){}
 
         public long id { set; get; }
-        public string firstanme { set; get; }
+        public string firstname { set; get; }
         public string lastname { set; get; }
         public int age { set; get; }
         public string password { set; get; }

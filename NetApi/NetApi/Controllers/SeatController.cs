@@ -24,14 +24,14 @@ namespace NetApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Seat>>> GetSeats()
         {
-            return await _context.Seats.ToListAsync();
+            return await _context.Seat.ToListAsync();
         }
 
         // GET: api/Seat/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Seat>> GetSeat(long id)
         {
-            var seat = await _context.Seats.FindAsync(id);
+            var seat = await _context.Seat.FindAsync(id);
 
             if (seat == null)
             {
@@ -79,7 +79,7 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Seat>> PostSeat(Seat seat)
         {
-            _context.Seats.Add(seat);
+            _context.Seat.Add(seat);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetSeat", new { id = seat.id }, seat);
@@ -89,13 +89,13 @@ namespace NetApi.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Seat>> DeleteSeat(long id)
         {
-            var seat = await _context.Seats.FindAsync(id);
+            var seat = await _context.Seat.FindAsync(id);
             if (seat == null)
             {
                 return NotFound();
             }
 
-            _context.Seats.Remove(seat);
+            _context.Seat.Remove(seat);
             await _context.SaveChangesAsync();
 
             return seat;
@@ -103,7 +103,7 @@ namespace NetApi.Controllers
 
         private bool SeatExists(long id)
         {
-            return _context.Seats.Any(e => e.id == id);
+            return _context.Seat.Any(e => e.id == id);
         }
     }
 }

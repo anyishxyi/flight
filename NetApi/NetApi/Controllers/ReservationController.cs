@@ -24,14 +24,14 @@ namespace NetApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reservation>>> GetReservations()
         {
-            return await _context.Reservations.ToListAsync();
+            return await _context.Reservation.ToListAsync();
         }
 
         // GET: api/Reservation/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Reservation>> GetReservation(long id)
         {
-            var reservation = await _context.Reservations.FindAsync(id);
+            var reservation = await _context.Reservation.FindAsync(id);
 
             if (reservation == null)
             {
@@ -79,7 +79,7 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Reservation>> PostReservation(Reservation reservation)
         {
-            _context.Reservations.Add(reservation);
+            _context.Reservation.Add(reservation);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetReservation", new { id = reservation.id }, reservation);
@@ -89,13 +89,13 @@ namespace NetApi.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Reservation>> DeleteReservation(long id)
         {
-            var reservation = await _context.Reservations.FindAsync(id);
+            var reservation = await _context.Reservation.FindAsync(id);
             if (reservation == null)
             {
                 return NotFound();
             }
 
-            _context.Reservations.Remove(reservation);
+            _context.Reservation.Remove(reservation);
             await _context.SaveChangesAsync();
 
             return reservation;
@@ -103,7 +103,7 @@ namespace NetApi.Controllers
 
         private bool ReservationExists(long id)
         {
-            return _context.Reservations.Any(e => e.id == id);
+            return _context.Reservation.Any(e => e.id == id);
         }
     }
 }

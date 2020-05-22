@@ -24,14 +24,14 @@ namespace NetApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Flight>>> GetFlights()
         {
-            return await _context.Flights.ToListAsync();
+            return await _context.Flight.ToListAsync();
         }
 
         // GET: api/Flight/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Flight>> GetFlight(long id)
         {
-            var flight = await _context.Flights.FindAsync(id);
+            var flight = await _context.Flight.FindAsync(id);
 
             if (flight == null)
             {
@@ -79,7 +79,7 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Flight>> PostFlight(Flight flight)
         {
-            _context.Flights.Add(flight);
+            _context.Flight.Add(flight);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetFlight", new { id = flight.id }, flight);
@@ -89,13 +89,13 @@ namespace NetApi.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Flight>> DeleteFlight(long id)
         {
-            var flight = await _context.Flights.FindAsync(id);
+            var flight = await _context.Flight.FindAsync(id);
             if (flight == null)
             {
                 return NotFound();
             }
 
-            _context.Flights.Remove(flight);
+            _context.Flight.Remove(flight);
             await _context.SaveChangesAsync();
 
             return flight;
@@ -103,7 +103,7 @@ namespace NetApi.Controllers
 
         private bool FlightExists(long id)
         {
-            return _context.Flights.Any(e => e.id == id);
+            return _context.Flight.Any(e => e.id == id);
         }
     }
 }
