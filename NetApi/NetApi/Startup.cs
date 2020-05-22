@@ -28,7 +28,7 @@ namespace NetApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<GlobalDataBaseContext>(opt =>
-              opt.UseInMemoryDatabase("TravelDataBase"));
+              opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
         }
 

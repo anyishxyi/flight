@@ -138,3 +138,5 @@
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.pdb
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.genruntimeconfig.cache
 /Users/akoumare/Documents/projetEnta/net5/group-777801/NetApi/NetApi/obj/Debug/netcoreapp3.1/NetApi.csprojAssemblyReference.cache
+C:\Users\benoni.d\source\repos\Backend Koumare\group-777801\NetApi\NetApi\obj\Debug\netcoreapp3.1\NetApi.dll
+C:\Users\benoni.d\source\repos\Backend Koumare\group-777801\NetApi\NetApi\obj\Debug\netcoreapp3.1\NetApi.pdb
