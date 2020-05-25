@@ -1,0 +1,8 @@
+TO DO
+-----
+dotnet tool install -g dotnet-ef
+dotnet ef database update
+dotnet run
+
+
+the api runs on "http://localhost:5010"
