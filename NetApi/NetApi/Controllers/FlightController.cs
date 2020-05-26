@@ -79,7 +79,7 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Flight>> PostFlight(Flight flight)
         {
-            int size = _context.Flight.Count();
+            int size = _context.Flight.Count() + 1;
             flight.id = size;
             _context.Flight.Add(flight);
             await _context.SaveChangesAsync();

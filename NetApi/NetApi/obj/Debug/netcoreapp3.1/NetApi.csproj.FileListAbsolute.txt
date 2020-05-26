@@ -278,3 +278,4 @@ C:\Users\benoni.d\source\repos\Backend Koumare\group-777801\NetApi\NetApi\obj\De
 C:\Users\benoni.d\source\repos\Backend Koumare\group-777801\NetApi\NetApi\obj\Debug\netcoreapp3.1\staticwebassets\NetApi.StaticWebAssets.Manifest.cache
 C:\Users\benoni.d\source\repos\Backend Koumare\group-777801\NetApi\NetApi\obj\Debug\netcoreapp3.1\staticwebassets\NetApi.StaticWebAssets.xml
 C:\Users\benoni.d\source\repos\Backend Koumare\group-777801\NetApi\NetApi\obj\Debug\netcoreapp3.1\NetApi.genruntimeconfig.cache
+C:\Users\benoni.d\source\repos\Backend Koumare\group-777801\NetApi\NetApi\obj\Debug\netcoreapp3.1\NetApi.csprojAssemblyReference.cache

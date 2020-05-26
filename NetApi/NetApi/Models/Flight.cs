@@ -13,8 +13,8 @@ namespace NetApi.Models
         public string departureAirport { get; set; }
         public string arrivalAirport { get; set; }
         public int numberOfSeat { get; set; }
-        public bool hasEscale { get; set; }
+        public int hasEscale { get; set; } = 0;
         public int flightNumber { get; set; }
-        public float price { get; set; }
-}
+        public int price { get; set; }
+    }
 }
