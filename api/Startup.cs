@@ -29,7 +29,7 @@ namespace api
         {
             services.AddDbContext<MyDatabaseContext>(options =>
                 options.UseSqlServer(Configuration.
-                    GetConnectionString("Server=tcp:flightdb.database.windows.net,1433;Database=flightdb;User ID=superuser;Password=nXcRwLZZCiNjxZLY@B2YmPU;Encrypt=true;Connection Timeout=30;")));
+                    GetConnectionString("MyDbConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,8 +40,8 @@ namespace api
                 app.UseDeveloperExceptionPage();
             }
 
-            // app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseHttpsRedirection();
+            // app.UseStaticFiles();
 
             app.UseRouting();
 
