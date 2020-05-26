@@ -7,7 +7,7 @@ namespace NetApi.Models
 
         public User(){}
 
-        public long id { set; get; }
+        public int id { set; get; }
         public string firstname { set; get; }
         public string lastname { set; get; }
         public int age { set; get; }
@@ -15,6 +15,6 @@ namespace NetApi.Models
         public string email { set; get; }
         public string gender { set; get; }
         public string phoneNumber { set; get; }
-        public UserStatus status { set; get; }
+        public string status { set; get; } = UserStatus.SIMPLE_CUSTOMER.ToString();
     }
 }

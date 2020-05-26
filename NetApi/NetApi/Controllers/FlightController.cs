@@ -29,7 +29,7 @@ namespace NetApi.Controllers
 
         // GET: api/Flight/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Flight>> GetFlight(long id)
+        public async Task<ActionResult<Flight>> GetFlight(int id)
         {
             var flight = await _context.Flight.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutFlight(long id, Flight flight)
+        public async Task<IActionResult> PutFlight(int id, Flight flight)
         {
             if (id != flight.id)
             {
@@ -79,6 +79,8 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Flight>> PostFlight(Flight flight)
         {
+            int size = _context.Flight.Count();
+            flight.id = size;
             _context.Flight.Add(flight);
             await _context.SaveChangesAsync();
 
@@ -87,7 +89,7 @@ namespace NetApi.Controllers
 
         // DELETE: api/Flight/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Flight>> DeleteFlight(long id)
+        public async Task<ActionResult<Flight>> DeleteFlight(int id)
         {
             var flight = await _context.Flight.FindAsync(id);
             if (flight == null)
@@ -101,7 +103,7 @@ namespace NetApi.Controllers
             return flight;
         }
 
-        private bool FlightExists(long id)
+        private bool FlightExists(int id)
         {
             return _context.Flight.Any(e => e.id == id);
         }

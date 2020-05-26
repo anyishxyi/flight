@@ -6,7 +6,7 @@ namespace NetApi.Models
         public Reservation()
         {
         }
-        public long id { get; set; }
+        public int id { get; set; }
         public virtual Flight flight { get; set; }
         public virtual User user { get; set; }
     }

@@ -29,7 +29,7 @@ namespace NetApi.Controllers
 
         // GET: api/Seat/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Seat>> GetSeat(long id)
+        public async Task<ActionResult<Seat>> GetSeat(int id)
         {
             var seat = await _context.Seat.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSeat(long id, Seat seat)
+        public async Task<IActionResult> PutSeat(int id, Seat seat)
         {
             if (id != seat.id)
             {
@@ -79,6 +79,8 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Seat>> PostSeat(Seat seat)
         {
+            int size = _context.Seat.Count() + 1;
+            seat.id = size;
             _context.Seat.Add(seat);
             await _context.SaveChangesAsync();
 
@@ -87,7 +89,7 @@ namespace NetApi.Controllers
 
         // DELETE: api/Seat/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Seat>> DeleteSeat(long id)
+        public async Task<ActionResult<Seat>> DeleteSeat(int id)
         {
             var seat = await _context.Seat.FindAsync(id);
             if (seat == null)
@@ -101,7 +103,7 @@ namespace NetApi.Controllers
             return seat;
         }
 
-        private bool SeatExists(long id)
+        private bool SeatExists(int id)
         {
             return _context.Seat.Any(e => e.id == id);
         }

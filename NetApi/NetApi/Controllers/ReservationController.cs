@@ -29,7 +29,7 @@ namespace NetApi.Controllers
 
         // GET: api/Reservation/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Reservation>> GetReservation(long id)
+        public async Task<ActionResult<Reservation>> GetReservation(int id)
         {
             var reservation = await _context.Reservation.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutReservation(long id, Reservation reservation)
+        public async Task<IActionResult> PutReservation(int id, Reservation reservation)
         {
             if (id != reservation.id)
             {
@@ -79,6 +79,8 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Reservation>> PostReservation(Reservation reservation)
         {
+            int size = _context.Reservation.Count() + 1;
+            reservation.id = size;
             _context.Reservation.Add(reservation);
             await _context.SaveChangesAsync();
 
@@ -87,7 +89,7 @@ namespace NetApi.Controllers
 
         // DELETE: api/Reservation/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Reservation>> DeleteReservation(long id)
+        public async Task<ActionResult<Reservation>> DeleteReservation(int id)
         {
             var reservation = await _context.Reservation.FindAsync(id);
             if (reservation == null)
@@ -101,7 +103,7 @@ namespace NetApi.Controllers
             return reservation;
         }
 
-        private bool ReservationExists(long id)
+        private bool ReservationExists(int id)
         {
             return _context.Reservation.Any(e => e.id == id);
         }

@@ -29,7 +29,7 @@ namespace NetApi.Controllers
 
         // GET: api/Airport/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Airport>> GetAirport(long id)
+        public async Task<ActionResult<Airport>> GetAirport(int id)
         {
             var airport = await _context.Airport.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace NetApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAirport(long id, Airport airport)
+        public async Task<IActionResult> PutAirport(int id, Airport airport)
         {
             if (id != airport.id)
             {
@@ -79,6 +79,8 @@ namespace NetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Airport>> PostAirport(Airport airport)
         {
+            int size = _context.Airport.Count() + 1;
+            airport.id = size;
             _context.Airport.Add(airport);
             await _context.SaveChangesAsync();
 
@@ -87,7 +89,7 @@ namespace NetApi.Controllers
 
         // DELETE: api/Airport/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Airport>> DeleteAirport(long id)
+        public async Task<ActionResult<Airport>> DeleteAirport(int id)
         {
             var airport = await _context.Airport.FindAsync(id);
             if (airport == null)
@@ -101,7 +103,7 @@ namespace NetApi.Controllers
             return airport;
         }
 
-        private bool AirportExists(long id)
+        private bool AirportExists(int id)
         {
             return _context.Airport.Any(e => e.id == id);
         }

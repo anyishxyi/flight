@@ -7,7 +7,7 @@ namespace NetApi.Models
         {
         }
 
-        public long id { get; set; }
+        public int id { get; set; }
         public string departureDate { get; set; }
         public string arrivalDate { get; set; }
         public string departureAirport { get; set; }
@@ -15,5 +15,6 @@ namespace NetApi.Models
         public int numberOfSeat { get; set; }
         public bool hasEscale { get; set; }
         public int flightNumber { get; set; }
+        public float price { get; set; }
 }
 }
