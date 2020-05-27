@@ -1,5 +1,5 @@
 using System;
-namespace api.Entities
+namespace api.Models
 {
     public class User
     {
