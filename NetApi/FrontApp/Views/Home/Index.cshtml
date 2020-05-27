@@ -1,0 +1,87 @@
+﻿@model IEnumerable<FrontApp.Models.Flight>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="form-horizontal">
+
+    <hr />
+    <div class="form-group">
+
+
+        <table class="table table-responsive" style="width:800px">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.departureDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.arrivalDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.departureAirport)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.arrivalAirport)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.numberOfSeat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.hasEscale)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.flightNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.price)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.departureDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arrivalDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.departureAirport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.arrivalAirport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numberOfSeat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numberOfSeat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hasEscale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.flightNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+        </tr>
+            }
+
+        </table>
+    </div>
+</div> 

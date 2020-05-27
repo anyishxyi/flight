@@ -1,7 +1,10 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetApi", "NetApi\NetApi.csproj", "{5E7FC28A-7A51-4BAE-89F2-3D17E0D254FF}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetApi", "NetApi\NetApi.csproj", "{5E7FC28A-7A51-4BAE-89F2-3D17E0D254FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontApp", "FrontApp\FrontApp.csproj", "{199CA5E1-66B9-415D-9E92-1BDDA9AED9CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +16,15 @@ Global
 		{5E7FC28A-7A51-4BAE-89F2-3D17E0D254FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E7FC28A-7A51-4BAE-89F2-3D17E0D254FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E7FC28A-7A51-4BAE-89F2-3D17E0D254FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199CA5E1-66B9-415D-9E92-1BDDA9AED9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199CA5E1-66B9-415D-9E92-1BDDA9AED9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199CA5E1-66B9-415D-9E92-1BDDA9AED9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199CA5E1-66B9-415D-9E92-1BDDA9AED9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED258AB6-E375-4811-8912-2C6148C329D1}
 	EndGlobalSection
 EndGlobal
