@@ -5,9 +5,7 @@ namespace api.Models
     {
         public enum SeatCategory { ECONOMIC, COMMERCIAL, FIRST_CLASS };
 
-        public Seat()
-        {
-        }
+        public Seat(){}
         public long id { get; set; }
         public int placeNumber { get; set; }
         public bool isEmpty { get; set; }

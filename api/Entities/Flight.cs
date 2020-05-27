@@ -3,10 +3,7 @@ namespace api.Models
 {
     public class Flight
     {
-        public Flight()
-        {
-        }
-
+        public Flight(){}
         public long id { get; set; }
         public string departureDate { get; set; }
         public string arrivalDate { get; set; }
