@@ -12,7 +12,10 @@ namespace api.Models
             : base(options)
         {
         }
-
-        // public DbSet<DotNetCoreSqlDb.Models.Todo> Todo { get; set; }
+        public DbSet<Airport> Airport { get; set; }
+		public DbSet<Flight> Flight { get; set; }
+		public DbSet<Reservation> Reservation { get; set; }
+		public DbSet<Seat> Seat { get; set; }
+		public DbSet<User> User { get; set; }
     }
 }
