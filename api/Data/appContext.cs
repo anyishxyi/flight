@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Models
 {
-    public class MyDatabaseContext : DbContext
+    public class appContext : DbContext
     {
-        public MyDatabaseContext (DbContextOptions<MyDatabaseContext> options)
+        public appContext (DbContextOptions<appContext> options)
             : base(options)
         {
         }
