@@ -10,11 +10,13 @@ namespace api.facade
 	{
 		private UserDao _userDao;
 		private FlightDao _flightDao;
+		private ReservationDao _reservationDao;
 
 		public ApiFacade(ApiContext context)
 		{
 			_userDao = new UserDao(context);
 			_flightDao = new FlightDao(context);
+			_reservationDao = new ReservationDao(context);
 		}
 	  bool IApiFacade.AddUser(User user)
 		{
@@ -36,6 +38,7 @@ namespace api.facade
 		{
 			return null;
 		}
+		//Flight
 		bool IApiFacade.AddFlight(Flight flightData)
 		{
 			return _flightDao.create(flightData);
@@ -53,6 +56,27 @@ namespace api.facade
 			return _flightDao.readAll();
 		}
 		User IApiFacade.GetFlight(int id)
+		{
+			return null;
+		}
+		//Reservation
+		bool IApiFacade.AddReservation(Reservation reservationData)
+		{
+			return _reservationDao.create(reservationData);
+		}
+		bool IApiFacade.DeleteReservation(Reservation reservationData)
+		{
+			return false;
+		}
+		bool IApiFacade.UpdateReservation(Reservation reservationData)
+		{
+			return false;
+		}
+		List<Reservation> IApiFacade.GetReservations()
+		{
+			return _reservationDao.readAll();
+		}
+		Reservation IApiFacade.GetReservation(int id)
 		{
 			return null;
 		}
