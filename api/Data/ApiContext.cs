@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using api.Entities;
 
-namespace api.Models
+namespace api.Data
 {
     public class ApiContext : DbContext
     {

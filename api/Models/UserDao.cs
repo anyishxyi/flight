@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using api.Models;
+using api.Entities;
+using api.Data;
 
 namespace api.Dao
 {
