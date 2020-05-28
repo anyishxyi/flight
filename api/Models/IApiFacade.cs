@@ -5,10 +5,10 @@ namespace api.facade
 {
 	interface IApiFacade 
 	{
-		bool AddUser();
-		bool DeleteUser();
-		bool UpdateUser();
+		bool AddUser(User userData);
+		bool DeleteUser(User userData);
+		bool UpdateUser(User userData);
 		List<User> GetUsers();
-		User GetUser();
+		User GetUser(string email);
 	}
 }
