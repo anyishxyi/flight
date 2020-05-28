@@ -1,34 +1,34 @@
-using System;
+using System.Collections.Generic;
 using api.Models;
 
 namespace api.Dao
 {
-	public static class UserDao {
-		private static ApiContext context;
+	public class UserDao: ModelDao<User> {
+		private ApiContext context;
 
-		public static bool create()
+		public override bool create(User user)
 		{
-			UserDao.context = new ApiContext();
+			this.context = new ApiContext();
 			return true;
 		}
-		public static bool delete()
+		public override bool delete(User user)
 		{
-			UserDao.context = new ApiContext();
+			this.context = new ApiContext();
 			return true;
 		}
-		public static bool update()
+		public override bool update(User user)
 		{
-			UserDao.context = new ApiContext();
+			this.context = new ApiContext();
 			return true;
 		}
-		public static User readByEmail(string email)
+		public override List<User> readAll()
 		{
-			UserDao.context = new ApiContext();
+			this.context = new ApiContext();
 			return null;
 		}
-		public static User readAll()
+		public User readByEmail(string email)
 		{
-			UserDao.context = new ApiContext();
+			this.context = new ApiContext();
 			return null;
 		}
 
