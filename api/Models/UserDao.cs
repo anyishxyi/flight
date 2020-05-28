@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Linq;
 using api.Entities;
 using api.Data;
@@ -15,8 +16,9 @@ namespace api.Dao
 
 		public override bool create(User user)
 		{
-			// this.context = new ApiContext();
-			return true;
+			EntityEntry uResponse = _context.User.Add(user);
+			_context.SaveChanges();
+			return uResponse == null ? false : true;
 		}
 		public override bool delete(User user)
 		{
@@ -31,9 +33,6 @@ namespace api.Dao
 		public override List<User> readAll()
 		{
 			List<User> users = _context.User.ToList();
-			// if(users == null) {
-			// 	return new List<User>();
-			// }
 			return users == null ? new List<User>() : users;
 		}
 		public User readByEmail(string email)

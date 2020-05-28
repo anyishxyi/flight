@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using api.Entities;
 
 namespace api.Data
@@ -11,10 +10,6 @@ namespace api.Data
         {
 
         }
-        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        // {
-        //     optionsBuilder.UseSqlServer(Configuration.GetConnectionString("MyDbConnection"));
-        // }
         public DbSet<Airport> Airport { get; set; }
 		public DbSet<Flight> Flight { get; set; }
 		public DbSet<Reservation> Reservation { get; set; }

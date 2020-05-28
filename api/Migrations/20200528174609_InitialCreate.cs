@@ -54,7 +54,7 @@ namespace api.Migrations
                     email = table.Column<string>(nullable: true),
                     gender = table.Column<string>(nullable: true),
                     phoneNumber = table.Column<string>(nullable: true),
-                    status = table.Column<int>(nullable: false)
+                    status = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
