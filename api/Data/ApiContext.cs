@@ -8,8 +8,7 @@ namespace api.Models
 {
     public class ApiContext : DbContext
     {
-        public ApiContext (DbContextOptions<ApiContext> options)
-            : base(options)
+        public ApiContext ()
         {
         }
         public DbSet<Airport> Airport { get; set; }
