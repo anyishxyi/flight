@@ -19,12 +19,12 @@ public class FlightController : ControllerBase
 		_iApiFacade = new ApiFacade(_context);
 	}
 
-	// GET: api/user/getall
+	// GET: api/Flight/getall
 	[HttpGet("all")]
 	public IActionResult getall()
 	{
 		
-		List<User> result = _iApiFacade.GetUsers();
+		List<Flight> result = _iApiFacade.GetFlights();
 		if (result == null)
 		{
 			return NotFound();
@@ -32,14 +32,14 @@ public class FlightController : ControllerBase
 		return Ok(result);
 	}
 
-	// POST: api/user/add
+	// POST: api/Flight/add
 	[HttpPost("add")]
-		public IActionResult add(User userData)
+		public IActionResult add(Flight flightData)
 	{
-		if(userData == null) {
+		if(flightData == null) {
 			return NotFound();
 		}
-		bool result = _iApiFacade.AddUser(userData);
+		bool result = _iApiFacade.AddFlight(flightData);
 		if (result)
 		{
 			return Ok(result);
@@ -47,14 +47,14 @@ public class FlightController : ControllerBase
 		return NotFound();
 	}
 
-	// POST: api/user/update
+	// POST: api/flight/update
 	[HttpPost("update")]
-		public IActionResult update(User userData)
+		public IActionResult update(Flight flightData)
 	{
-		if(userData == null) {
+		if(flightData == null) {
 			return NotFound();
 		}
-		bool result = _iApiFacade.UpdateUser(userData);
+		bool result = _iApiFacade.UpdateFlight(flightData);
 		if (result)
 		{
 			return Ok(result);
@@ -62,11 +62,11 @@ public class FlightController : ControllerBase
 		return NotFound();
 	}
 
-	// POST: api/user/delete
+	// POST: api/flight/delete
 	[HttpPost("delete")]
-		public IActionResult delete(User userData)
+		public IActionResult delete(Flight flightData)
 	{
-		bool result = _iApiFacade.DeleteUser(userData);
+		bool result = _iApiFacade.DeleteFlight(flightData);
 		if (result)
 		{
 			return Ok(result);
