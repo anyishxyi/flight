@@ -10,8 +10,8 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(ApiContext))]
-    [Migration("20200528174609_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200528191348_InitialCreatee")]
+    partial class InitialCreatee
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,14 +55,14 @@ namespace api.Migrations
                     b.Property<string>("arrivalAirport")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("arrivalDate")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("arrivalDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("departureAirport")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("departureDate")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("departureDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("flightNumber")
                         .HasColumnType("int");

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace api.Migrations
 {
@@ -28,8 +29,8 @@ namespace api.Migrations
                 {
                     id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    departureDate = table.Column<string>(nullable: true),
-                    arrivalDate = table.Column<string>(nullable: true),
+                    departureDate = table.Column<DateTime>(nullable: false),
+                    arrivalDate = table.Column<DateTime>(nullable: false),
                     departureAirport = table.Column<string>(nullable: true),
                     arrivalAirport = table.Column<string>(nullable: true),
                     numberOfSeat = table.Column<int>(nullable: false),
