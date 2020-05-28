@@ -4,7 +4,7 @@ namespace api.Entities
     public class Flight
     {
         public Flight(){}
-        public long id { get; set; }
+        public long FlightID { get; set; }
         public DateTime departureDate { get; set; }
         public DateTime arrivalDate { get; set; }
         public string departureAirport { get; set; }

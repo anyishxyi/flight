@@ -1,7 +1,7 @@
 TO DO
 -----
 dotnet tool install -g dotnet-ef
-dotnet ef migrations add InitialCreate
+dotnet ef migrations add create
 dotnet ef database update
 dotnet run
 

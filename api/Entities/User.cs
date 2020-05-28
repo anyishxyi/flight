@@ -5,7 +5,7 @@ namespace api.Entities
     {
         // public enum UserStatus { ADMIN, SIMPLE_CUSTOMER, ACCOUNT_CUSTOMER };
         public User(){}
-        public long id { set; get; }
+        public long UserID { set; get; }
         public string firstname { set; get; }
         public string lastname { set; get; }
         public int age { set; get; }

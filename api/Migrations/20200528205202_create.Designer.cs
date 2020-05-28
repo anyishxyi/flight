@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using api.Data;
 
 namespace api.Migrations
 {
     [DbContext(typeof(ApiContext))]
-    partial class ApiContextModelSnapshot : ModelSnapshot
+    [Migration("20200528205202_create")]
+    partial class create
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,6 +95,8 @@ namespace api.Migrations
 
                     b.HasIndex("FlightID");
 
+                    b.HasIndex("UserID");
+
                     b.ToTable("Reservation");
                 });
 
@@ -171,7 +175,7 @@ namespace api.Migrations
 
                     b.HasOne("api.Entities.User", "user")
                         .WithMany()
-                        .HasForeignKey("FlightID");
+                        .HasForeignKey("UserID");
                 });
 
             modelBuilder.Entity("api.Entities.Seat", b =>
