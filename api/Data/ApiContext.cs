@@ -5,9 +5,7 @@ namespace api.Data
 {
     public class ApiContext : DbContext
     {
-        public ApiContext ()
-        {
-        }
+        public ApiContext(DbContextOptions<ApiContext> options): base(options){ }
         public DbSet<Airport> Airport { get; set; }
 		public DbSet<Flight> Flight { get; set; }
 		public DbSet<Reservation> Reservation { get; set; }

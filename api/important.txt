@@ -1,9 +1,11 @@
 TO DO
 -----
 dotnet tool install -g dotnet-ef
+dotnet ef migrations add InitialCreate
 dotnet ef database update
 dotnet run
 
+if any problem with update: dotnet ef database update then repeat
 
 
 the api runs on "http://localhost:5010"

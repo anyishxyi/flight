@@ -28,6 +28,8 @@ namespace api
             services.AddDbContext<ApiContext>(options =>
                 options.UseSqlServer(Configuration.
                     GetConnectionString("MyDbConnection")));
+			services.AddAuthorization();
+			services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

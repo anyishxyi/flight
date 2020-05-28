@@ -8,25 +8,27 @@ using api.Entities;
 
 [ApiController]
 [Route("api/[controller]")]
+[Produces("application/json")]
+[Consumes("application/json")]
 public class UserController : ControllerBase
 {
-	private IApiFacade iApiFacade = new ApiFacade();
 	// GET: api/users/GetUsers
 	[HttpGet("GetUsers")]
-	[Produces("application/json")]
 	public IActionResult GetUsers()
 	{
+		IApiFacade iApiFacade = new ApiFacade();
 		List<User> result = iApiFacade.GetUsers();
-		if (result.Count > 0)
+		if (result.Count() > 0)
 		{
 			return Ok(result);
 		}
 		return NotFound();
 	}
+
 	[HttpPost]
-	[Consumes("application/json")]
 		public IActionResult AddUser()
 	{
+		IApiFacade iApiFacade = new ApiFacade();
 		bool result = iApiFacade.AddUser();
 		if (result)
 		{
