@@ -12,5 +12,5 @@ namespace api.Entities
         public int numberOfSeat { get; set; }
         public bool hasEscale { get; set; }
         public int flightNumber { get; set; }
-}
+    }
 }

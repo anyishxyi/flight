@@ -9,6 +9,7 @@ namespace api.facade
 	public class ApiFacade : IApiFacade
 	{
 		private UserDao _userDao;
+		private FlightDao _flightDao;
 
 		public ApiFacade(ApiContext context)
 		{
@@ -31,6 +32,26 @@ namespace api.facade
 			return _userDao.readAll();
 		}
 		User IApiFacade.GetUser(string email)
+		{
+			return null;
+		}
+		bool AddFlight(Flight flightData)
+		{
+			return true;
+		}
+		bool DeleteFlight(Flight flightData)
+		{
+			return true;
+		}
+		bool UpdateFlight(Flight flightData)
+		{
+			return true;
+		}
+		List<Flight> GetFlights()
+		{
+			return null;
+		}
+		User GetFlight(int id)
 		{
 			return null;
 		}
