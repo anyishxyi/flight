@@ -14,6 +14,7 @@ namespace api.facade
 		public ApiFacade(ApiContext context)
 		{
 			_userDao = new UserDao(context);
+			_flightDao = new FlightDao(context);
 		}
 	  bool IApiFacade.AddUser(User user)
 		{
@@ -35,23 +36,23 @@ namespace api.facade
 		{
 			return null;
 		}
-		bool AddFlight(Flight flightData)
+		bool IApiFacade.AddFlight(Flight flightData)
 		{
-			return true;
+			return _flightDao.create(flightData);
 		}
-		bool DeleteFlight(Flight flightData)
+		bool IApiFacade.DeleteFlight(Flight flightData)
 		{
-			return true;
+			return _flightDao.delete(flightData);
 		}
-		bool UpdateFlight(Flight flightData)
+		bool IApiFacade.UpdateFlight(Flight flightData)
 		{
-			return true;
+			return _flightDao.update(flightData);
 		}
-		List<Flight> GetFlights()
+		List<Flight> IApiFacade.GetFlights()
 		{
-			return null;
+			return _flightDao.readAll();
 		}
-		User GetFlight(int id)
+		User IApiFacade.GetFlight(int id)
 		{
 			return null;
 		}
