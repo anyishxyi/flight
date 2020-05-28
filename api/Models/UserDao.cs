@@ -1,11 +1,17 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using api.Entities;
 using api.Data;
 
 namespace api.Dao
 {
 	public class UserDao: ModelDao<User> {
-		// private ApiContext context;
+		private ApiContext _context;
+		public UserDao(ApiContext context)
+		{
+			_context = context;
+		}
 
 		public override bool create(User user)
 		{
@@ -24,8 +30,11 @@ namespace api.Dao
 		}
 		public override List<User> readAll()
 		{
-			// this.context = new ApiContext();
-			return null;
+			List<User> users = _context.User.ToList();
+			// if(users == null) {
+			// 	return new List<User>();
+			// }
+			return users == null ? new List<User>() : users;
 		}
 		public User readByEmail(string email)
 		{

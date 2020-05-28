@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using api.facade;
 using api.Entities;
+using api.Data;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -10,13 +11,21 @@ using api.Entities;
 [Consumes("application/json")]
 public class UserController : ControllerBase
 {
+	private ApiContext _context;
+	private IApiFacade _iApiFacade;
+	public UserController(ApiContext context)
+	{
+		_context = context;
+		_iApiFacade = new ApiFacade(_context);
+	}
+
 	// GET: api/user/getall
 	[HttpGet("all")]
 	public IActionResult getall()
 	{
-		IApiFacade iApiFacade = new ApiFacade();
-		List<User> result = iApiFacade.GetUsers();
-		if (result == null || result.Count() <= 0)
+		
+		List<User> result = _iApiFacade.GetUsers();
+		if (result == null)
 		{
 			return NotFound();
 		}
@@ -30,8 +39,7 @@ public class UserController : ControllerBase
 		if(userData == null) {
 			return NotFound();
 		}
-		IApiFacade iApiFacade = new ApiFacade();
-		bool result = iApiFacade.AddUser(userData);
+		bool result = _iApiFacade.AddUser(userData);
 		if (result)
 		{
 			return Ok(result);
@@ -46,8 +54,7 @@ public class UserController : ControllerBase
 		if(userData == null) {
 			return NotFound();
 		}
-		IApiFacade iApiFacade = new ApiFacade();
-		bool result = iApiFacade.UpdateUser(userData);
+		bool result = _iApiFacade.UpdateUser(userData);
 		if (result)
 		{
 			return Ok(result);
@@ -59,8 +66,7 @@ public class UserController : ControllerBase
 	[HttpPost("delete")]
 		public IActionResult delete(User userData)
 	{
-		IApiFacade iApiFacade = new ApiFacade();
-		bool result = iApiFacade.DeleteUser(userData);
+		bool result = _iApiFacade.DeleteUser(userData);
 		if (result)
 		{
 			return Ok(result);
